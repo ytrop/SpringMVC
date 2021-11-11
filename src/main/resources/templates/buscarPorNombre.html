@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Prueba Spring MVC</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body class="card-body">
+		<div class="card text-dark bg-light mb-3">
+		  <div class="card-header">Search</div>
+		  <div class="card-body">
+				<form th:action="@{/SearchClient}" th:object="${searchedCustomer}" method="POST">
+					<div class="form-group">
+			  			<label for="inpCustomerName">Name</label>
+			  			<input type="text" class="form-control" id="inputName" name="name" >
+					</div>
+					<button type="submit" name="btnSearch" class="btn btn-success">Search</button>
+					<a class="btn btn-primary" href="index" role="button" id="Return">Back</a>
+				</form>
+			  </div>
+			</div>
+	</body>
+</html>

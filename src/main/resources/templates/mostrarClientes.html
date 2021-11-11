@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Prueba Spring MVC</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body class="card-body">
+		<div class="card text-dark bg-light mb-3">
+		  	<div class="card-header">Clients</div>
+			<div class="card-body">
+				<table class="table table-bordered">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col">Name</th>
+							<th scope="col">First Surname</th>
+							<th scope="col">Second Surname</th>
+							<th scope="col">Document</th>
+							<th scope="col">Delete</th>
+						</tr>
+					</thead>
+					<tbody>
+						<th:block th:each="customer : ${customersList}">
+							<tr>
+								<td scope="row" th:text="${customer.name}"/>
+								<td scope="row" th:text="${customer.surName1}"/>
+								<td scope="row" th:text="${customer.surName2}"/>
+								<td scope="row" th:text="${customer.identityDocNumber}" />
+								<td scope="row" th:hidden="${showCustomersViewDropInd}">
+									<form action="BorrarCliente" method="post">
+										<button th:disabled="${deleteClientEnabled}" type="submit"
+											id="deleteClient" name="customerId" th:value="${customer.id}"
+											class="btn btn-outline-danger">Delete</button>
+									</form>
+								</td>
+							</tr>
+						</th:block>
+					</tbody>
+				</table>
+				<a class="btn btn-success" th:href="@{/index}" id="BtnBack" role="button">Back</a>
+			</div>
+		</div>
+	</body>
+</html>
