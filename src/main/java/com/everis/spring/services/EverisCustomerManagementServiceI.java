@@ -34,8 +34,9 @@ public interface EverisCustomerManagementServiceI {
 	 * Búsqueda por nombre.
 	 * 
 	 * @param name
+	 * @return 
 	 */
-	public void searchByName(final String name);
+	public List<EverisCustomer> searchByName(final String name);
 	
 	public void deleteCustomer(final int deleteCustomerId);
 

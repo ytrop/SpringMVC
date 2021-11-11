@@ -60,15 +60,15 @@ public class EverisCustomerManagementServiceImpl implements EverisCustomerManage
 	}
 
 	@Override
-	public void searchByName(final String name) {
+	public List<EverisCustomer> searchByName(final String name) {
 
-		// Obtención del listado de clientes por nombre.
+		
 		final List<EverisCustomer> searchCustomers = customerRepository.findByName(name);
 
-		// Muestra el listado obtenido.
-		printCustomers(searchCustomers);
+		
+		return searchCustomers;
+		
 	}
-	
 	@Override
 	public void deleteCustomer(int idDeleteCustomer) {
 		//Borramos objeto

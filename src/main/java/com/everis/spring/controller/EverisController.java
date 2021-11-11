@@ -72,8 +72,8 @@ public String onSubmit(EverisCustomer customer) {
 
 public String BuscarCliente(Model model, EverisCustomer customer) {
 	
-	List<EverisCustomer> clientView = new ArrayList<>();
-	clientView = customerService.searchByName(customer.getName());
+	List<EverisCustomer> clientView = customerService.searchByName(customer.getName());
+	
 	model.addAttribute("customersList", clientView);
 	model.addAttribute("btnDropCustomerEnabled", false);
 

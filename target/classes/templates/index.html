@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Prueba Spring MVC</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body class="card-body">
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		    <a class="navbar-brand" th:href="@{/mostrarClientes}" type="button">Search all clients</a>
+			<a class="navbar-brand" th:href="@{/nuevoCliente}" type="button">Search client by name</a>
+			<a class="navbar-brand" th:href="@{/BuscarPorNombre}" type="button">Add client</a>
+		</nav>
+	
+		<div class="card text-dark bg-light mb-3">
+		  	<div class="card-body">
+				<h3>Welcome</h3>
+				<h4>Please, select your action</h4>
+			</div>
+		</div>
+	</body>
+</html>
